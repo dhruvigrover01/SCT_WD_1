@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,56 +13,182 @@
     
 
 <!--header navbar section link-->
-
 <header>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
     <!--logo-->
     <a href="#" class="logo"><span>H</span>ope<span>&</span><span>H</span>ormones</a>
 
     <!--navbar link-->
     <nav class="navbar">
-    <ul>
-                        <li><a href="#home">home</a></li>
-                        <li><a href="#about">about</a></li>
-                        <li><a href="#doctor">doctor</a></li>
-                        <li><a href="#review">revire</a></li>
-                        <li><a href="#contact">contact</a></li>
-                        <li><a href="#blog">blog</a></li>
-    
-    </ul>
-</nav>
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#doctor">doctor</a></li>
+            <li><a href="#review">review</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#blog">blog</a></li>
+        </ul>
+    </nav>
 
-<div class="fas fa-bars"></div>
+    <div class="fas fa-bars"></div>
 </header>
 
 
+<!-- Home Section -->
 <section id="home" class="home">
-     <div class="row">
+    <div class="row">
 
-     <div class="images">
-        <img src="Replace the center m.png" alt="">
-     </div>
+        <div class="images">
+            <img src="Replace the center m.png" alt="">
+        </div>
 
-     <div class="content">
-        <h1>"<span>Stronger </span>Women<br><span>Healthier</span> Tomorrow"</h1>
-        <p>Polycystic Ovary Syndrome (PCOD) is one of the most common health concerns among young women today. At Hope & Hormones,  .</p>
-        <a href="#"><button class="button">Read more</button></a>
-     </div>
-     </div>
+        <div class="content">
+            <h1>"<span>Stronger </span>Women<br><span>Healthier</span> Tomorrow"</h1>
+            <p>Polycystic Ovary Syndrome (PCOD) is one of the most common health concerns among young women today. At Hope & Hormones, we aim to create awareness, provide support, and guide women toward healthier lifestyles.</p>
+            <a href="#about"><button class="button">Read more</button></a>
+        </div>
+
+    </div>
 </section>
-<!--about section-->
-<section id="about" class="about">
-    <h1 class="heading">about our faculty</h1>
-    <h3 class="title">learn and explore our faculty</h3>
 
-    <div class="box-cntainer">
+<section>
+<!-- About Section -->
+<section id="about" class="about">
+    <h1 class="heading">About <span>PCOD</span></h1>
+    <p class="title">Empowering Women. Spreading Awareness. Building Healthier Futures.</p>
+
+    <div class="box-container">
 
         <div class="box">
             <div class="images">
-                <img src="">
+                <img src="https://www.sugarfit.com/assets/63490c42c69bb16955c77c83_pcos-awareness_Z5tYXx.jpg" alt="PCOD Awareness">
+            </div>
+            <div class="content">
+                
+                <p>Polycystic Ovarian Disease (PCOD) is a hormonal condition that affects many women of reproductive age. It happens when the ovaries release immature or partially mature eggs, which over time can turn into cysts. Women with PCOD may experience irregular or missed periods, weight gain, acne, hair thinning or excessive hair growth, mood changes, and difficulty conceiving. The exact cause is not fully known, but genetics, lifestyle, and hormonal imbalance play a major role. While PCOD is a long-term condition, it can be managed with healthy lifestyle changes, proper diet, regular exercise, stress management, and medical support. Early awareness and care not only reduce symptoms but also help prevent future complications like diabetes, infertility, and heart problems.</p>
             </div>
         </div>
+        
+
+<!-- ================== Symptom Checker ================== -->
+<section id="checker" class="checker">
+  <h2 class="heading">Symptom Checker</h2>
+  <p class="title">Tick the symptoms you’ve noticed recently. This is not a diagnosis—only a quick self-check.</p>
+
+  <div class="checker-card">
+    <form id="pcodForm">
+      <div class="checker-grid">
+        <!-- Cycle & Hormone related -->
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="irregular_periods">
+          Irregular or missed periods
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="heavy_or_painful">
+          Very heavy or very painful periods
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="acne_oily">
+          Persistent acne / oily skin
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="hair_growth">
+          Excess hair growth (face/chest/back)
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="hair_thinning">
+          Hair thinning / scalp hair loss
+        </label>
+
+        <!-- Metabolic & other -->
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="weight_gain">
+          Sudden / unexplained weight gain
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="dark_patches">
+          Dark patches on neck/underarms (acanthosis)
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="cravings_fatigue">
+          Sugar cravings or frequent fatigue
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="mood_swings">
+          Mood swings / anxiety / low mood
+        </label>
+        <label class="checker-item">
+          <input type="checkbox" name="symptom" value="fertility_difficulty">
+          Difficulty conceiving
+        </label>
+      </div>
+
+      <div class="checker-actions">
+        <button type="button" class="button" id="checkNow">Check now</button>
+        <button type="reset" class="button button-secondary" id="resetForm">Reset</button>
+      </div>
+    </form>
+
+    <div id="checkerResult" class="checker-result" aria-live="polite" hidden>
+      <h3 class="result-title"></h3>
+      <p class="result-text"></p>
+
+      <div class="suggestions" id="suggestions" hidden>
+        <h4>Helpful next steps</h4>
+        <ul>
+          <li>Track your cycle and symptoms for 2–3 months.</li>
+          <li>Aim for balanced meals (protein + fiber + healthy fats).</li>
+          <li>Move 30–45 mins most days (walk, yoga, strength).</li>
+          <li>Sleep 7–8 hours and manage stress (breathing, journaling).</li>
+          <li>Consider medical advice for blood tests & personalized care.</li>
+        </ul>
+      </div>
+
+      <p class="disclaimer">
+        <strong>Disclaimer:</strong> This tool is for awareness only and does not replace professional medical advice.
+      </p>
     </div>
+  </div>
 </section>
+<!-- ================== /Symptom Checker ================== -->
+<!-- ========== Why Choose Us ========== -->
+<section class="whyus" id="whyus">
+  <h2 class="heading">Why Choose Us</h2>
+  <p class="title">We’re here to support women every step of the way</p>
+
+  <div class="whyus-grid">
+    <div class="whyus-card">
+      <div class="icon">👩‍⚕️</div>
+      <h3>Expert Doctors</h3>
+      <p>Qualified gynecologists and endocrinologists with years of PCOD/PCOS expertise.</p>
+    </div>
+
+    <div class="whyus-card">
+      <div class="icon">📝</div>
+      <h3>Personalized Plans</h3>
+      <p>Treatment strategies tailored to your unique health needs and lifestyle.</p>
+    </div>
+
+    <div class="whyus-card">
+      <div class="icon">🥗</div>
+      <h3>Diet & Lifestyle</h3>
+      <p>Nutrition guidance, exercise routines, and stress management support.</p>
+    </div>
+
+    <div class="whyus-card">
+      <div class="icon">📱</div>
+      <h3>24/7 Consultation</h3>
+      <p>Round-the-clock support, so help is always just a message away.</p>
+    </div>
+  </div>
+</section>
+<!-- ========== /Why Choose Us ========== -->
+
+
+</body>
+</html>
+
 
 
 
