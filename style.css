@@ -1,8 +1,9 @@
 
 :root{
-    --blue:#0188df;
+    --blue:#ff9999;
     --black:#444d53;
-    --wight:#fff;
+    --wight:white
+    ;
     }
 
 *{
@@ -13,6 +14,7 @@
    outline:none;
    box-sizing: border-box;
    transition: all linear .2s;
+   
 }
 
 html{
@@ -107,7 +109,7 @@ header .fa-times{
     width: 600px;
  }
  .home .content h1{
-    font-size: 3.2rem;
+    font-size: 3.7rem;
     color:var(--black)
  }
 
@@ -370,7 +372,7 @@ header .fa-times{
 }
 
 .whyus-card {
-  background: var(--wight);
+  background: var(--blue);
   padding: 2rem 1.5rem;
   border-radius: 1.2rem;
   box-shadow: 0 .3rem .8rem rgba(0,0,0,.08);
@@ -389,7 +391,7 @@ header .fa-times{
 
 .whyus-card h3 {
   font-size: 1.8rem;
-  color: var(--blue);
+  color: var(--black);
   margin-bottom: .6rem;
 }
 
@@ -521,4 +523,35 @@ header .fa-times{
 
 #reviewForm button {
   align-self: flex-start;
+}
+
+
+.carousel-container {
+  width: 100%;
+  max-width: 400px;   /* adjust as needed */
+  height: 250px;      /* fixed height */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;  /* hide all images */
+}
+
+.carousel img.active {
+  display: block; /* show only active one */
+}
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
 }
