@@ -44,8 +44,8 @@
         </div>
 
         <div class="content">
-            <h1>"<span>Stronger </span>Women<br><span>Healthier</span> Tomorrow"</h1>
-            <p>Polycystic Ovary Syndrome (PCOD) is one of the most common health concerns among young women today. At Hope & Hormones, we aim to create awareness, provide support, and guide women toward healthier lifestyles.</p>
+            <h1>"<span>Stronger </span>Women <span>Healthier</span> Tomorrow"</h1>
+            <p>Caring for you with excellence, empathy, and expertise. Together, let’s build a healthier community.</p>
             <a href="#about"><button class="button">Read more</button></a>
         </div>
 
@@ -61,21 +61,54 @@
     <div class="box-container">
 
         <div class="box">
-            <div class="images">
-                <img src="https://www.sugarfit.com/assets/63490c42c69bb16955c77c83_pcos-awareness_Z5tYXx.jpg" alt="PCOD Awareness">
+            <!-- Slideshow starts here -->
+            <div class="images carousel-container">
+                <div class="carousel">
+                    <img src="https://i.pinimg.com/736x/2a/a5/06/2aa506ea70233763acb61e7e735e7120.jpg" alt="PCOD Awareness 1">
+                    <img src="https://i.pinimg.com/736x/c4/94/aa/c494aa7365e3eedd3e63f4324bc9ac07.jpg" alt="PCOD Awareness 2">
+                    <img src="https://i.pinimg.com/736x/12/d8/f5/12d8f531050e8d5eb38db40cdd868477.jpg" alt="PCOD Awareness 3">
+                    <img src="https://i.pinimg.com/736x/e4/25/a1/e425a1635c2c1a05e182cc71a4a95c04.jpg" alt="PCOD Awareness 4">
+                </div>
             </div>
+            <!-- Slideshow ends here -->
+
             <div class="content">
-                
-                <p>Polycystic Ovarian Disease (PCOD) is a hormonal condition that affects many women of reproductive age. It happens when the ovaries release immature or partially mature eggs, which over time can turn into cysts. Women with PCOD may experience irregular or missed periods, weight gain, acne, hair thinning or excessive hair growth, mood changes, and difficulty conceiving. The exact cause is not fully known, but genetics, lifestyle, and hormonal imbalance play a major role. While PCOD is a long-term condition, it can be managed with healthy lifestyle changes, proper diet, regular exercise, stress management, and medical support. Early awareness and care not only reduce symptoms but also help prevent future complications like diabetes, infertility, and heart problems.</p>
+                <p>
+                    Polycystic Ovarian Disease (PCOD) is a hormonal condition that affects many women of reproductive age. 
+                    It happens when the ovaries release immature or partially mature eggs, which over time can turn into cysts. 
+                    Women with PCOD may experience irregular or missed periods, weight gain, acne, hair thinning or excessive hair growth, 
+                    mood changes, and difficulty conceiving. The exact cause is not fully known, but genetics, lifestyle, and hormonal imbalance 
+                    play a major role. While PCOD is a long-term condition, it can be managed with healthy lifestyle changes, proper diet, 
+                    regular exercise, stress management, and medical support. Early awareness and care not only reduce symptoms but also 
+                    help prevent future complications like diabetes, infertility, and heart problems.
+                </p>
             </div>
         </div>
+    </div>
+</section>
+<script>
+let currentIndex = 0;
+const images = document.querySelectorAll(".carousel img");
+
+function showNextImage() {
+  images[currentIndex].classList.remove("active");
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].classList.add("active");
+}
+
+// show first image
+images[currentIndex].classList.add("active");
+
+// change every 3 seconds
+setInterval(showNextImage, 3000);
+</script>
         
 
 <!-- ================== Symptom Checker ================== -->
 <section id="checker" class="checker">
 
   <h2 class="heading">Symptom Checker</h2>
-  <p class="title">Tick the symptoms you’ve noticed recently. This is not a diagnosis—only a quick self-check.</p>
+  <p class="title">Tick the symptoms you’ve noticed recently.</p>
 
   <div class="checker-card">
     <form id="pcodForm">
